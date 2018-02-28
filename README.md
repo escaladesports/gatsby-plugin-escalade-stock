@@ -1,17 +1,38 @@
-# Gatsby Plugin Boilerplate
+# gatsby-plugin-escalade-stock
 
-A simple Gatsby plugin boilerplate.
+A simple Gatsby plugin for [prefetching Escalade stock](https://github.com/escaladesports/escalade-react-stock#prefetch-stock).
 
-## Getting started
+## Install
+
+With npm:
 
 ```bash
-git clone git@github.com:escaladesports/gatsby-plugin-boilerplate.git your-module
-cd your-module
-yarn
-yarn reset
+npm install --save gatsby-plugin-escalade-stock
 ```
 
-## Usage
+With Yarn:
 
-- `yarn test`: Run mocha tests
-- `yarn analyze`: View bundle sizes
+```bash
+yarn add gatsby-plugin-escalade-stock
+```
+
+## Implement
+
+```javascript
+// ./gatsby-config.js
+module.exports = {
+	plugins: [
+		{
+			resolve: 'gatsby-plugin-escalade-stock',
+			options: {
+				site: 'bear',
+				ids: [
+					'AT86A06455R',
+					'AK1450SR',
+					'AFT2032140',
+				]
+			}
+		}
+	]
+}
+```
