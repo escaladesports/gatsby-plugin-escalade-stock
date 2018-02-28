@@ -1,6 +1,5 @@
 import { expect } from 'chai'
-import { onRouteUpdate } from '../dist/gatsby-browser'
-import { onRenderBody } from '../dist/gatsby-ssr'
+import { onInitialClientRender } from '../gatsby-browser'
 
 describe('Gatsby plugins', () => {
 	it('should import', () => {
